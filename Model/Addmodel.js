@@ -11,7 +11,12 @@ const schema = new mongoose.Schema({
         type:String,
     },
     AttachFile:{
-        type:String,
+        base64:{
+            type:String,
+        },
+        name:{
+            type:String
+        }
     },
     Description:{
         type:String,
