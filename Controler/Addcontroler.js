@@ -44,7 +44,7 @@ exports.editdetails=async(req,res)=>{
             return res.status(404).json({message:'Details not found'})
         }
         const updatedetails = await addmodel.findByIdAndUpdate(id,req.body,{new:true})
-        res.status(200).json({message:"Details Update Successfully",data:updatedetails})
+        res.status(200).json({message:" Update Successfully",data:updatedetails})
 
     }catch(error){
         res.status(500).json({message:"server error found"})
@@ -60,7 +60,7 @@ exports.deletedetail = async(req,res)=>{
             return res.status(404).json({message:"details not found"})
         }
        await addmodel.findByIdAndDelete(id)
-        res.status(200).json({message:"Details Deleted Successfully"})
+        res.status(200).json({message:" Deleted Successfully"})
 
     }catch(error){
         res.status(500).json({message:"server error"})
