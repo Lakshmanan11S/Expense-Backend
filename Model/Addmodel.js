@@ -10,6 +10,9 @@ const schema = new mongoose.Schema({
     Amount:{
         type:String,
     },
+    AttachFile:{
+        type:String,
+    },
     Description:{
         type:String,
     },

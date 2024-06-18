@@ -7,6 +7,7 @@ exports.adddetails=async(req,res)=>{
             Name:req.body.Name,
             Type:req.body.Type,
             Amount:req.body.Amount,
+            AttachFile:req.body.AttachFile,
             Description:req.body.Description,
             Date:req.body.Date
         })
