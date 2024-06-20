@@ -7,6 +7,15 @@ const schema = new mongoose.Schema({
     Type:{
         type:String,
     },
+    CreditReason:{
+        type:String,
+    },
+    DebitReason:{
+        type:String,
+    },
+    TransactionDetails:{
+        type:String,
+    },
     Amount:{
         type:String,
     },

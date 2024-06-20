@@ -6,9 +6,11 @@ exports.adddetails=async(req,res)=>{
         const newdetails = new addmodel({
             Name:req.body.Name,
             Type:req.body.Type,
+            CreditReason:req.body.CreditReason,
+            DebitReason:req.body.DebitReason,
+            TransactionDetails:req.body.TransactionDetails,
             Amount:req.body.Amount,
             AttachFile:req.body.AttachFile,
-        
             Description:req.body.Description,
             Date:req.body.Date
         })
