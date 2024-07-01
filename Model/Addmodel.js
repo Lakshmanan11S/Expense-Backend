@@ -1,39 +1,53 @@
-const mongoose = require('mongoose')
+
+
+const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-    Name:{
-        type:String,
+    Name: {
+        type: String,
     },
-    Type:{
-        type:String,
+    Type: {
+        type: String,
     },
-    CreditReason:{
-        type:String,
+    OpeningBalance:{
+        type:Number,
     },
-    DebitReason:{
-        type:String,
+    CreditAmount: {
+        type: Number,
     },
-    TransactionDetails:{
-        type:String,
+    DebitAmount: {
+        type: Number,
     },
-    Amount:{
-        type:String,
+    Balance: {
+        type: Number,
     },
-    AttachFile:{
-        base64:{
-            type:String,
+    CreditReason: {
+        type: String,
+    },
+    DebitReason: {
+        type: String,
+    },
+    TransactionDetails: {
+        type: String,
+    },
+   
+    AttachFile: {
+        base64: {
+            type: String,
         },
-        name:{
-            type:String
+        name: {
+            type: String,
         }
     },
-    Description:{
-        type:String,
+    Description: {
+        type: String,
     },
-    Date:{
-        type:String,
+    Date: {
+        type: String,
+        
     },
-})
-const result = new mongoose.model("Add Detail",schema)
+});
 
-module.exports=result
+const AddDetail = mongoose.model('AddDetail', schema);
+
+module.exports = AddDetail;

@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const usermodel = require('../Model/Model')
-const amountmodel=require('../Model/amountmodel')
+
 
 
 exports.login = async (req, res) => {
@@ -27,16 +27,3 @@ exports.login = async (req, res) => {
 };
 
 
-exports.addamount = async(req,res)=>{
-    try{
-        
-        const newamount =  new amountmodel({
-             Amount :req.body.Amount
-
-        })
-        await newamount.save()
-        res.send({message:"amount added",data:newamount})
-    }catch(error){
-        res.status(500).json({message:"error found"})
-    }
-}

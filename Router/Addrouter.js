@@ -6,5 +6,10 @@ addrouter.post('/adddetails',addcontroler.adddetails)
 addrouter.get('/getalldetails',addcontroler.getalldetails)
 addrouter.put('/editdetails/:id',addcontroler.editdetails)
 addrouter.delete('/deletedetail/:id',addcontroler.deletedetail)
+addrouter.post('/getdetailsbydaterange',addcontroler.getDetailsByDateRange)
+addrouter.get('/getopeningbalance',addcontroler.getOpeningBalance)
+
+
+
 
 module.exports=addrouter
